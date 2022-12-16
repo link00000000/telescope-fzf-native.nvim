@@ -1,9 +1,9 @@
 CFLAGS = -Wall -Werror -fpic -std=gnu99
 
 ifeq ($(OS),Windows_NT)
-    MKD = cmd //C mkdir
-    RM = cmd //C rmdir //Q //S
-    CC = gcc
+    MKD = cmd /C mkdir
+    RM = cmd /C rmdir /Q /S
+    CC = zig cc
     TARGET := libfzf.dll
 else
     MKD = mkdir -p
